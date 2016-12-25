@@ -680,33 +680,39 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" ")
   script.Print(" ")
   script.Print(" ")
-  script.Print(" RRRRRRRRRRRRRRRRR     RRRRRRRRRRRRRRRRR   ")
-  script.Print(" R::::::::::::::::R    R::::::::::::::::R  ")
-  script.Print(" R::::::RRRRRR:::::R   R::::::RRRRRR:::::R ")
-  script.Print(" RR:::::R     R:::::R  RR:::::R     R:::::R")
-  script.Print("   R::::R     R:::::R    R::::R     R:::::R")
-  script.Print("   R::::R     R:::::R    R::::R     R:::::R")
-  script.Print("   R::::RRRRRR:::::R     R::::RRRRRR:::::R ")
-  script.Print("   R:::::::::::::RR      R:::::::::::::RR  ")
-  script.Print("   R::::RRRRRR:::::R     R::::RRRRRR:::::R ")
-  script.Print("   R::::R     R:::::R    R::::R     R:::::R")
-  script.Print("   R::::R     R:::::R    R::::R     R:::::R")
-  script.Print("   R::::R     R:::::R    R::::R     R:::::R")
-  script.Print(" RR:::::R     R:::::R  RR:::::R     R:::::R")
-  script.Print(" R::::::R     R:::::R  R::::::R     R:::::R")
-  script.Print(" R::::::R     R:::::R  R::::::R     R:::::R")
-  script.Print(" RRRRRRRR     RRRRRRR  RRRRRRRR     RRRRRRR")
+  script.Print("PPPPPPPPPPPPP          FFFFFFFFFFFFFFFFF   ");
+  script.Print("P::::::::::::PPP       F:::::::::::::::F   ");
+  script.Print("P:::::::::::::::PP     F:::::::::::::::F   ");
+  script.Print("PPP:::::PPPPP:::::P    F:::::FFFFFFFFFFF   ");
+  script.Print("  P:::::P   PPP::::P   F:::::F             ");
+  script.Print("  P:::::P    PP:::::P  F:::::FFFFFF        ");
+  script.Print("  P:::::P   PPP::::P   F::::::::::F        ");
+  script.Print("  P:::::PPPPP:::::P    F::::::::::F        ");
+  script.Print("  P:::::::::::::PP     F:::::FFFFFF        ");
+  script.Print("  P:::::::::::PPP      F:::::F             ");
+  script.Print("  P:::::PPPPPPP        F:::::F             ");
+  script.Print("  P:::::P              F:::::F             ");
+  script.Print("PPP:::::PPP          FFF:::::::FFF         ");
+  script.Print("P:::::::::P          F:::::::::::F         ");
+  script.Print("P:::::::::P          F:::::::::..F         ");
+  script.Print("PPPPPPPPPPPixel      FFFFFFFFFFFFFreak     ");
+  script.Print("                                       ")
+  script.Print(" ResurrectionRemix PixelDroid Edition  ")
+  script.Print("                                       ")
+  script.Print("             NOUGAT 7.1.x              ")
+  script.Print("                                       ")
   script.Print(" ")
   script.Print(" ")
-  
-  if GetBuildProp("ro.rr.version", OPTIONS.info_dict) is not None:
-    buildid = GetBuildProp("ro.rr.version", OPTIONS.info_dict)
+  if GetBuildProp("ro.pixeldroid.version", OPTIONS.info_dict) is not None:
+    buildid = GetBuildProp("ro.pixeldroid.version", OPTIONS.info_dict)
     buildidn = GetBuildProp("ro.build.id", OPTIONS.info_dict)
     buildday = GetBuildProp("ro.build.date", OPTIONS.info_dict)
     securep = GetBuildProp("ro.build.version.security_patch", OPTIONS.info_dict)
     buildhst = GetBuildProp("ro.build.host", OPTIONS.info_dict)
+    modelid = GetBuildProp("ro.product.model", OPTIONS.info_dict)
+    device = GetBuildProp("ro.product.device", OPTIONS.info_dict)
     density = GetBuildProp("ro.sf.lcd_density", OPTIONS.info_dict)
-    device = GetBuildProp("ro.rr.device", OPTIONS.info_dict)
+    device = GetBuildProp("ro.pixeldroid.device", OPTIONS.info_dict)
     androidver = GetBuildProp("ro.build.version.release", OPTIONS.info_dict)
     manufacturer = GetBuildProp("ro.product.manufacturer", OPTIONS.info_dict)
     maintainer = GetBuildProp("ro.build.user", OPTIONS.info_dict)
@@ -731,6 +737,8 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.Print(" Maintainer: %s"%(maintainer));
     script.Print(" **************** Hardware *****************");
     script.Print(" Device codename: %s"%(device));
+    script.Print("");
+    script.Print(" Model info: %s"%(modelid));
     script.Print("");
     script.Print(" Manufacturer: %s"%(manufacturer));
     script.Print("");
