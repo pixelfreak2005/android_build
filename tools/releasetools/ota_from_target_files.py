@@ -712,7 +712,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     modelid = GetBuildProp("ro.product.model", OPTIONS.info_dict)
     device = GetBuildProp("ro.product.device", OPTIONS.info_dict)
     density = GetBuildProp("ro.sf.lcd_density", OPTIONS.info_dict)
-    device = GetBuildProp("ro.pixeldroid.device", OPTIONS.info_dict)
+    device = GetBuildProp("ro.rr.device", OPTIONS.info_dict)
     androidver = GetBuildProp("ro.build.version.release", OPTIONS.info_dict)
     manufacturer = GetBuildProp("ro.product.manufacturer", OPTIONS.info_dict)
     maintainer = GetBuildProp("ro.build.user", OPTIONS.info_dict)
