@@ -704,8 +704,8 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" ")
   script.Print(" ")
 
-  if GetBuildProp("ro.pixeldroid.version", OPTIONS.info_dict) is not None:
-    buildid = GetBuildProp("ro.pixeldroid.version", OPTIONS.info_dict)
+  if GetBuildProp("ro.pf.version", OPTIONS.info_dict) is not None:
+    buildid = GetBuildProp("ro.pf.version", OPTIONS.info_dict)
     buildtype = GetBuildProp("pf.build.type", OPTIONS.info_dict)
     buildidn = GetBuildProp("ro.build.id", OPTIONS.info_dict)
     buildday = GetBuildProp("ro.build.date", OPTIONS.info_dict)
