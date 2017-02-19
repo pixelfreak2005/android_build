@@ -21,7 +21,7 @@ ifneq ($(addon_name),)
 addon_dir_leaf  := $(addon_name)-$(FILE_NAME_TAG)-$(INTERNAL_SDK_HOST_OS_NAME)
 addon_dir_img   := $(addon_dir_leaf)-img
 intermediates   := $(HOST_OUT_INTERMEDIATES)/SDK_ADDON/$(addon_name)_intermediates
-sdk_addon_target     := $(HOST_OUT_SDK_ADDON)/$(addon_dir_leaf).zip
+sdk_addon_target := $(HOST_OUT_SDK_ADDON)/$(addon_dir_leaf).zip
 full_target_img := $(HOST_OUT_SDK_ADDON)/$(addon_dir_img).zip
 staging         := $(intermediates)
 
@@ -105,7 +105,7 @@ $(full_target): PRIVATE_DOCS_DIRS := $(addprefix $(OUT_DOCS)/, $(doc_modules))
 $(full_target): PRIVATE_STAGING_DIR := $(call append-path,$(staging),$(addon_dir_leaf))
 
 $(full_target): $(sdk_addon_deps) | $(ACP)
-	@echo "Packaging SDK Addon: $@"
+	@echo Packaging SDK Addon: $@
 	$(hide) mkdir -p $(PRIVATE_STAGING_DIR)/docs
 	$(hide) for d in $(PRIVATE_DOCS_DIRS); do \
 	    $(ACP) -r $$d $(PRIVATE_STAGING_DIR)/docs ;\
